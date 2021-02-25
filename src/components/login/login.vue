@@ -28,8 +28,8 @@ export default {
     }
   },
   methods:{
-    handleLogin(){
-      this.$http.post('login',this.formdata).then(res => {
+    async handleLogin(){
+      const res = await this.$http.post('login',this.formdata)
         // console.log(res)
         const {
           data,
@@ -42,7 +42,6 @@ export default {
         }else{
           this.$message.warning(msg)
         }
-      })
     }
   }
 };
