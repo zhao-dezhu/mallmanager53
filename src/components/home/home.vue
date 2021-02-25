@@ -99,7 +99,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  beforeCreate() {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      this.$router.push({ name: "login" });
+    }
+  }
+};
 </script>
 
 <style>
