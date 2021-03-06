@@ -79,6 +79,7 @@
     </el-table>
     <!-- 分页 -->
     <el-pagination
+      class="userPage"
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
       :current-page="pagenum"
@@ -322,6 +323,7 @@ export default {
 
 <style>
 .box-card {
+  position: relative;
   height: 100%;
 }
 .inputSearch {
@@ -329,5 +331,9 @@ export default {
 }
 .searchRow {
   margin-top: 20px;
+}
+.userPage {
+  position: absolute;
+  bottom: 10px;
 }
 </style>
